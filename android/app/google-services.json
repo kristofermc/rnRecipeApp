@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "106423161208",
+    "firebase_url": "https://rnrecipeapp.firebaseio.com",
+    "project_id": "rnrecipeapp",
+    "storage_bucket": "rnrecipeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106423161208:android:174ea60363297b7027f88d",
+        "android_client_info": {
+          "package_name": "com.rnrecipeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106423161208-9q07curvc353ll5hvdp7njnscg6u4l4r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rnrecipeapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "106423161208-qrbm4l88tq1rhfcu5ucfc6g269o6mk86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyrN9_YDTmZqUT3Swu7UIf8igksC8eFcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106423161208-qrbm4l88tq1rhfcu5ucfc6g269o6mk86.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "106423161208-gkd9n61s3sr0qeed7r00oolsgivp7o4t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.rnRecipeApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
