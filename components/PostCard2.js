@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -16,12 +16,19 @@ import {
   Interaction,
   InteractionText,
   Divider,
+  TimeText,
+  IngText,
+  StepText,
+  Button,
 } from '../styles/RecipeStyles';
 
 const PostCard2 = ({item}) => {
   readIcon = item.read ? 'reader' : 'reader-outline';
   readIconColor = item.read ? '#eb4034' : '#eb4034';
   readText = 'Read';
+
+  closeIcon = item.close ? 'reader' : 'close-circle-outline';
+  closeIconColor = item.close ? '#eb4034' : '#eb4034';
 
   likeIcon = item.liked ? 'heart' : 'heart-outline';
   likeIconColor = item.liked ? '#eb4034' : '#eb4034';
@@ -44,7 +51,7 @@ const PostCard2 = ({item}) => {
   } else {
     loveText = 'Love';
   }
-
+  const [shouldShow, setShouldShow] = useState(false);
   return (
     <Card>
       <UserInfo>
@@ -67,20 +74,36 @@ const PostCard2 = ({item}) => {
           <Ionicons name={loveIcon} size={25} color={loveIconColor} />
           <InteractionText active={item.loved}>{loveText}</InteractionText>
         </Interaction>
-        <Interaction active={item.read}>
+        <Interaction
+          active={item.read}
+          onPress={() => setShouldShow(!shouldShow)}>
           <Ionicons name={readIcon} size={25} color={readIconColor} />
           <InteractionText active={item.read}>{readText}</InteractionText>
         </Interaction>
       </InteractionWrapper>
-      <InteractionWrapper>
-        <Interaction>
-          <Ionicons name={'star'} size={25} color={readIconColor} />
-          <Ionicons name={'star'} size={25} color={readIconColor} />
-          <Ionicons name={'star'} size={25} color={readIconColor} />
-          <Ionicons name={'star'} size={25} color={readIconColor} />
-          <Ionicons name={'star'} size={25} color={readIconColor} />
-        </Interaction>
-      </InteractionWrapper>
+
+      {shouldShow ? (
+        <>
+          <TimeText>
+            <Ionicons name={'timer-outline'} size={25} color={readIconColor} />
+            {item.time}
+          </TimeText>
+
+          <InteractionWrapper>
+            <IngText>{item.ing}</IngText>
+            <IngText>{item.ing2}</IngText>
+          </InteractionWrapper>
+          <StepText>{item.steps}</StepText>
+          <InteractionWrapper>
+            <Interaction
+              active={item.close}
+              onPress={() => setShouldShow(!shouldShow)}>
+              <Ionicons name={closeIcon} size={25} color={closeIconColor} />
+              <InteractionText active={item.close}></InteractionText>
+            </Interaction>
+          </InteractionWrapper>
+        </>
+      ) : null}
     </Card>
   );
 };

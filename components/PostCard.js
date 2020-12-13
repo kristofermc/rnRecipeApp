@@ -20,10 +20,10 @@ import {
 
 const PostCard = ({item}) => {
   likeIcon = item.liked ? 'heart' : 'heart-outline';
-  likeIconColor = item.liked ? '#2e64e5' : '#333';
+  likeIconColor = item.liked ? '#eb4034' : '#eb4034';
 
   loveIcon = item.loved ? 'flame' : 'flame-outline';
-  loveIconColor = item.loved ? '#2e64e5' : '#333';
+  loveIconColor = item.loved ? '#eb4034' : '#eb4034';
 
   if (item.likes == 1) {
     likeText = '1 Like';

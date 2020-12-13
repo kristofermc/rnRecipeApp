@@ -84,3 +84,26 @@ export const InteractionText = styled.Text`
   margin-top: 5px;
   margin-left: 5px;
 `;
+
+export const TimeText = styled.Text`
+  align-self: center;
+  font-size: 19px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+`;
+
+export const IngText = styled.Text`
+  align-self: center;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+`;
+
+export const StepText = styled.Text`
+  font-size: 16px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+`;

@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SignupScreen from '../screens/SignupScreen';
 import LoginScreen from '../screens/LoginScreen';
 import OnboardingScreen from '../screens/OnboardingScreen';
+import AvocadoScreen from '../recipes/AvocadoScreen';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
